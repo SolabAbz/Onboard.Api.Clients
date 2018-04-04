@@ -94,8 +94,12 @@ Function New-ApiClient {
 }
 #-----------------------------------------------------------[Execution]------------------------------------------------------------
 
+Get-ChildItem
+
 Write-Host "Downloading File..."
 Get-SwaggerDefinition
+
+Get-ChildItem
 
 Write-Host "Generating clients..."
 New-ApiClient -output 'csharp/.netstandard1.3' -language 'csharp' -config '.\CSharp\.netstandard1.3\Config.json'
