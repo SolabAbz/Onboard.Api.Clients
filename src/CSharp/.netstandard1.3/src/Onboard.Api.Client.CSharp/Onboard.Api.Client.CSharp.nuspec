@@ -1,0 +1,17 @@
+<?xml version="1.0"?>
+<package >
+  <metadata>
+    <id>Onboard.Api.Client.CSharp</id>
+    <version>1.0.0</version>
+    <title>Onboard Api Client</title>
+    <authors>Darren Maddox</authors>
+    <owners>Solab</owners>
+    <licenseUrl>https://opensource.org/licenses/MIT</licenseUrl>
+    <projectUrl>https://github.com/SolabAbz/Onboard.Api.Clients</projectUrl>
+    <iconUrl>https://onboardtracker.com/wp-content/uploads/2017/12/onboard_tracker_plain.svg</iconUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>A C# client for interfacing with an Onboard tenants data.</description>
+    <releaseNotes></releaseNotes>
+    <copyright>Copyright 2018</copyright>
+  </metadata>
+</package>
