@@ -36,6 +36,7 @@ $apiKey = $Env:ApiKey;
 
 if (!$apiKey) {
     Write-Error "Api key was not found.  Please ensure the environmental variable is set."
+    return;
 }
 
 #Set Error Action to Silently Continue
