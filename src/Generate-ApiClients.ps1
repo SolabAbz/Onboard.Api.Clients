@@ -94,8 +94,6 @@ Function New-ApiClient {
 }
 #-----------------------------------------------------------[Execution]------------------------------------------------------------
 
-dir
-
 Write-Host "Downloading File..."
 Get-SwaggerDefinition
 
