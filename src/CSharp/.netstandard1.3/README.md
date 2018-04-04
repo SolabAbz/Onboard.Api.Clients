@@ -50,15 +50,22 @@ namespace Example
 
             // Configure OAuth2 access token for authorization: Bearer
             Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
+            // Configure API key authorization: Subscription_Key
+            Configuration.Default.ApiKey.Add("Ocp-Apim-Subscription-Key", "YOUR_API_KEY");
+            // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+            // Configuration.Default.ApiKeyPrefix.Add("Ocp-Apim-Subscription-Key", "Bearer");
+            // Configure API key authorization: Tenant_Id
+            Configuration.Default.ApiKey.Add("X-Onboard-Tenant-Id", "YOUR_API_KEY");
+            // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+            // Configuration.Default.ApiKeyPrefix.Add("X-Onboard-Tenant-Id", "Bearer");
 
             var apiInstance = new CertificateApi();
             var id = id_example;  // string | 
-            var xOnboardTenantId = xOnboardTenantId_example;  // string | 
             var query = new Query(); // Query |  (optional) 
 
             try
             {
-                InlineResponse200 result = apiInstance.CertificateByIdGet(id, xOnboardTenantId, query);
+                InlineResponse200 result = apiInstance.CertificateByIdGet(id, query);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -74,20 +81,20 @@ namespace Example
 <a name="documentation-for-api-endpoints"></a>
 ## Documentation for API Endpoints
 
-All URIs are relative to *https://localhost*
+All URIs are relative to *https://solab.azure-api.net/onboard*
 
 Class | Method | HTTP request | Description
 ------------ | ------------- | ------------- | -------------
-*CertificateApi* | [**CertificateByIdGet**](docs/CertificateApi.md#certificatebyidget) | **GET** https://solab.azure-api.net/onboard/certification/Certificate/{Id} | 
-*CertificateApi* | [**CertificateGet**](docs/CertificateApi.md#certificateget) | **GET** https://solab.azure-api.net/onboard/certification/Certificate | 
-*PeopleApi* | [**PeopleByIdGet**](docs/PeopleApi.md#peoplebyidget) | **GET** https://solab.azure-api.net/onboard/people/People/{Id} | 
-*PeopleApi* | [**PeopleGet**](docs/PeopleApi.md#peopleget) | **GET** https://solab.azure-api.net/onboard/people/People | 
+*CertificateApi* | [**CertificateByIdGet**](docs/CertificateApi.md#certificatebyidget) | **GET** /certification/Certificate/{Id} | 
+*CertificateApi* | [**CertificateGet**](docs/CertificateApi.md#certificateget) | **GET** /certification/Certificate | 
+*PeopleApi* | [**PeopleByIdGet**](docs/PeopleApi.md#peoplebyidget) | **GET** /people/People/{Id} | 
+*PeopleApi* | [**PeopleGet**](docs/PeopleApi.md#peopleget) | **GET** /people/People | 
 
 
 <a name="documentation-for-models"></a>
 ## Documentation for Models
 
- - [Model.HttpssolabAzureapiNetonboardcertificationCertificateCertificationCategory](docs/HttpssolabAzureapiNetonboardcertificationCertificateCertificationCategory.md)
+ - [Model.CertificationCertificateCertificationCategory](docs/CertificationCertificateCertificationCategory.md)
  - [Model.InlineResponse200](docs/InlineResponse200.md)
  - [Model.InlineResponse2001](docs/InlineResponse2001.md)
  - [Model.Query](docs/Query.md)
@@ -104,4 +111,18 @@ Class | Method | HTTP request | Description
 - **Flow**: implicit
 - **Authorization URL**: https://solababz.eu.auth0.com/authorize?audience&#x3D;https%3A%2F%2Fonboardtracker.portal.azure-api.net%2F
 - **Scopes**: N/A
+
+<a name="Subscription_Key"></a>
+### Subscription_Key
+
+- **Type**: API key
+- **API key parameter name**: Ocp-Apim-Subscription-Key
+- **Location**: HTTP header
+
+<a name="Tenant_Id"></a>
+### Tenant_Id
+
+- **Type**: API key
+- **API key parameter name**: X-Onboard-Tenant-Id
+- **Location**: HTTP header
 
