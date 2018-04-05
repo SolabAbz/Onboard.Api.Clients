@@ -3,11 +3,11 @@
 This repository is used to generated all clients for the Onboard api.
 
 ## Clients
-|      Language      | Documentation | Package |
-|--------------------|---------------|---------|
-| C#                 | //TODO        | [Nuget](https://www.nuget.org/packages/Onboard.Api.Client.CSharp/)
-| Typescript JQuery  | //TODO        |
-| Angular 4+         | //TODO        |
+|      Language      |           Documentation             | Package |
+|--------------------|-------------------------------------|---------|
+| C#                 | [Docs](docs/csharp/index.md)        | [Nuget](https://www.nuget.org/packages/Onboard.Api.Client.CSharp/)
+| Typescript JQuery  | //TODO                              |
+| Angular 4+         | //TODO                              |
 
 ## To Build
 
