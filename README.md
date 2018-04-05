@@ -1,13 +1,15 @@
 # Onboard.Api.Client.CSharp
 
+[![Build Status](https://solab.visualstudio.com/Onboard.Api/_apis/build/repos/git/badge?api-version=4.1-preview&branchName=master)]
+
 This repository is used to generated all clients for the Onboard api.
 
 ## Clients
-| Language | Package |
-|----------|---------|
-| C#                    | //TODO |
-| Typescript JQuery     | //TODO |
-| Angular 4+            | //TODO |
+|      Language      | Documentation | Package |
+|--------------------|---------------|---------|
+| C#                 | //TODO        |
+| Typescript JQuery  | //TODO        |
+| Angular 4+         | //TODO        |
 
 ## To Build
 
