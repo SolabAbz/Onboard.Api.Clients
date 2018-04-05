@@ -12,7 +12,7 @@ OpenAPI spec version: 1.0.0
     <MinimumVisualStudioVersion>14.0</MinimumVisualStudioVersion>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{3E77A9EE-637B-4B6D-8A07-F215DCE6CB47}</ProjectGuid>
+    <ProjectGuid>{C6B853BB-92D7-4667-87D8-FD9B9CF38DA2}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>Onboard.Api.Client.CSharp</RootNamespace>
