@@ -2,7 +2,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 14
 VisualStudioVersion = 14.0.25420.1
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Onboard.Api.Client.CSharp", "src\Onboard.Api.Client.CSharp\Onboard.Api.Client.CSharp.csproj", "{877A412C-CE2F-43DE-9562-DB625529B4E9}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Onboard.Api.Client.CSharp", "src\Onboard.Api.Client.CSharp\Onboard.Api.Client.CSharp.csproj", "{46FDCBA3-C780-41AC-907C-87044A264912}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -10,10 +10,10 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{877A412C-CE2F-43DE-9562-DB625529B4E9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{877A412C-CE2F-43DE-9562-DB625529B4E9}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{877A412C-CE2F-43DE-9562-DB625529B4E9}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{877A412C-CE2F-43DE-9562-DB625529B4E9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{46FDCBA3-C780-41AC-907C-87044A264912}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{46FDCBA3-C780-41AC-907C-87044A264912}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{46FDCBA3-C780-41AC-907C-87044A264912}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{46FDCBA3-C780-41AC-907C-87044A264912}.Release|Any CPU.Build.0 = Release|Any CPU
 		{19F1DEBC-DE5E-4517-8062-F000CD499087}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{19F1DEBC-DE5E-4517-8062-F000CD499087}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{19F1DEBC-DE5E-4517-8062-F000CD499087}.Release|Any CPU.ActiveCfg = Release|Any CPU
