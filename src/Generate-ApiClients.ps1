@@ -111,4 +111,5 @@ git config user.name "Solab Bot"
 
 git add .
 git commit -m "Automatic commit.  The clients have been regenerated."
+git remote add origin https://solab-bot:f59a00d3ea46bdddb42482025376aa4e0f2f9192@github.com/SolabAbz/Onboard.Api.Clients.git
 git push origin HEAD:master
