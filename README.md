@@ -1,6 +1,6 @@
 # Onboard.Api.Client.CSharp
 
-[![Build Status](https://solab.visualstudio.com/Onboard.Api/_apis/build/repos/git/badge?api-version=4.1-preview&branchName=master)]
+[![Build Status](https://solab.visualstudio.com/Onboard.Api/_apis/build/repos/git/badge?api-version=4.1-preview&branchName=master)](http://solab.co.uk)
 
 This repository is used to generated all clients for the Onboard api.
 
