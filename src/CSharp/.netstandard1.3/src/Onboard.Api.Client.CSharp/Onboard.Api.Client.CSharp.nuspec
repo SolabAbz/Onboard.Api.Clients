@@ -2,7 +2,7 @@
 <package >
   <metadata>
     <id>Onboard.Api.Client.CSharp</id>
-    <version>1.0.0</version>
+    <version>$version$</version>
     <title>Onboard Api Client</title>
     <authors>Darren Maddox</authors>
     <owners>Solab</owners>

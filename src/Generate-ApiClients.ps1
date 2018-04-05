@@ -94,12 +94,8 @@ Function New-ApiClient {
 }
 #-----------------------------------------------------------[Execution]------------------------------------------------------------
 
-Get-ChildItem
-
 Write-Host "Downloading File..."
 Get-SwaggerDefinition
-
-Get-ChildItem
 
 Write-Host "Generating clients..."
 New-ApiClient -output 'csharp/.netstandard1.3' -language 'csharp' -config '.\CSharp\.netstandard1.3\Config.json'
@@ -109,3 +105,7 @@ New-ApiClient -output 'typescript/typescript-jquery' -language 'typescript-jquer
 
 Write-Host "Cleaning up..."
 Remove-Item $definition
+
+git add .
+git commit -m "Automatic commit.  The clients have been regenerated."
+git push
