@@ -106,6 +106,9 @@ New-ApiClient -output 'typescript/typescript-jquery' -language 'typescript-jquer
 Write-Host "Cleaning up..."
 Remove-Item $definition
 
+git config user.email "devteam@solab.co.uk"
+git config user.name "Solab Bot"
+
 git add .
 git commit -m "Automatic commit.  The clients have been regenerated."
-git push
+git push origin HEAD:master
