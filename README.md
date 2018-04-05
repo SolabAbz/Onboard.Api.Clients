@@ -5,7 +5,7 @@ This repository is used to generated all clients for the Onboard api.
 ## Clients
 |      Language      | Documentation | Package |
 |--------------------|---------------|---------|
-| C#                 | //TODO        |
+| C#                 | //TODO        | [Nuget](https://www.nuget.org/packages/Onboard.Api.Client.CSharp/)
 | Typescript JQuery  | //TODO        |
 | Angular 4+         | //TODO        |
 
