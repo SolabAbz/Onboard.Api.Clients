@@ -30,7 +30,7 @@
 
 #----------------------------------------------------------[Declarations]----------------------------------------------------------
 
-$swaggerUri = "http://solab.azure-api.net/onboard/swagger"
+$swaggerUri = "https://solab.azure-api.net/onboard/swagger"
 $definition = "swagger-definition.json"
 
 $apiKey = $Env:ApiKey;
@@ -101,7 +101,6 @@ Get-SwaggerDefinition
 
 Write-Host "Generating clients..."
 New-ApiClient -output 'csharp/.netstandard1.3' -language 'csharp' -config '.\CSharp\.netstandard1.3\Config.json'
-New-ApiClient -output 'typescript/typescript-fetch' -language 'typescript-fetch'
 New-ApiClient -output 'typescript/typescript-angular' -language 'typescript-angular'
 New-ApiClient -output 'typescript/typescript-jquery' -language 'typescript-jquery'
 
