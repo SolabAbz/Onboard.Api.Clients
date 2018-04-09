@@ -6,8 +6,8 @@ This repository is used to generated all clients for the Onboard api.
 |      Language      |           Documentation             | Package |
 |--------------------|-------------------------------------|---------|
 | C#                 | [Docs](docs/csharp/index.md)        | [Nuget](https://www.nuget.org/packages/Onboard.Api.Client.CSharp/)
-| Typescript JQuery  | //TODO                              |
-| Angular 4+         | //TODO                              |
+| Typescript JQuery  | //TODO                              | [NPM](https://www.npmjs.com/package/@solab/onboard-api-client-jquery)
+| Angular 4+         | //TODO                              | [NPM](https://www.npmjs.com/package/@solab/onboard-api-client-angular)
 
 ## To Build
 
