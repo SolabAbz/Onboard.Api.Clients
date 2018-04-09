@@ -130,7 +130,7 @@ Function Update-NPMVersion {
 
     $file = (Get-Content -Raw -Path $path | ConvertFrom-Json)
     $file.version = $version;
-    $file | ConvertTo-Json | Out-File $path
+    $file | ConvertTo-Json | Out-File $path -Encoding ASCII
 }
 
 Function Get-NPMVersion {
@@ -168,7 +168,7 @@ Update-NPMVersion -path .\Typescript\typescript-angular\package.json -version $v
 Update-NPMVersion -path .\Typescript\typescript-jquery\package.json -version $version
 
 Set-Location ./CSharp/.netstandard1.3/src/Onboard.Api.Client.CSharp/Properties/
-New-AssemblyInfo $version | Out-File -FilePath "AssemblyInfo.cs"
+New-AssemblyInfo $version | Out-File -FilePath "AssemblyInfo.cs" -Encoding ASCII
 
 git config user.email "devteam@solab.co.uk"
 git config user.name "Solab Bot"
