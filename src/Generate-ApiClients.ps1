@@ -118,6 +118,31 @@ Function New-AssemblyInfo {
         [assembly: AssemblyFileVersion(`"$version`")]
         [assembly: AssemblyInformationalVersion(`"$version`")]"
 }
+
+Function Update-NPMVersion {
+    Param(
+        [Parameter(Mandatory = $true)]
+        [String]$version,
+
+        [Parameter(Mandatory = $true)]
+        [String]$path        
+    )
+
+    $file = (Get-Content -Raw -Path $path | ConvertFrom-Json)
+    $file.version = $version;
+    $file | ConvertTo-Json | Out-File $path
+}
+
+Function Get-NPMVersion {
+    Param (
+        [Parameter(Mandatory = $true)]
+        [String]$path
+    )
+
+    $file = (Get-Content -Raw -Path $path | ConvertFrom-Json)
+    return $file.version;
+}
+
 #-----------------------------------------------------------[Execution]------------------------------------------------------------
 
 Write-Host "Downloading File..."
@@ -131,22 +156,24 @@ New-ApiClient -output 'typescript/typescript-jquery' -language 'typescript-jquer
 Write-Host "Cleaning up..."
 Remove-Item $definition
 
-# Does not deal with multiple branches
 Write-Host "Updating version"
-Set-Location .\Typescript\typescript-angular\
-$version = npm version minor
-$version = $version.Trim("v")
+$version = Get-NPMVersion -path .\Typescript\typescript-angular\package.json
 
-Set-Location .\..\typescript-jquery\
-npm version $version
+$parts = $version.Split(".")
+$parts[1] = [int]$parts[1] + 1;
 
-Set-Location ./../../CSharp/.netstandard1.3/src/Onboard.Api.Client.CSharp/Properties/
+$version = ($parts -join '.')
+
+Update-NPMVersion -path .\Typescript\typescript-angular\package.json -version $version
+Update-NPMVersion -path .\Typescript\typescript-jquery\package.json -version $version
+
+Set-Location ./CSharp/.netstandard1.3/src/Onboard.Api.Client.CSharp/Properties/
 New-AssemblyInfo $version | Out-File -FilePath "AssemblyInfo.cs"
 
 git config user.email "devteam@solab.co.uk"
 git config user.name "Solab Bot"
 
-git add .
+git add *
 git commit -m "Automatic commit.  The clients have been regenerated."
 git remote set-url origin "https://solab-bot:$gitKey@github.com/SolabAbz/Onboard.Api.Clients.git"
 git push origin HEAD:master
