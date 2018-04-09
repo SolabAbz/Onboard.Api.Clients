@@ -94,6 +94,29 @@ Function New-ApiClient {
         -Wait `
         -ArgumentList $args
 }
+
+Function New-AssemblyInfo {
+    Param(
+        [Parameter(Mandatory = $true)]
+        [String]$version
+    )
+
+    return "
+        using System.Reflection;
+        using System.Runtime.InteropServices;
+
+        [assembly: AssemblyTitle(`"Onboard Api`")]
+        [assembly: AssemblyDescription(`"A C# client for interfacing with an Onboard tenants data.`")]
+        [assembly: AssemblyConfiguration(`"`")]
+        [assembly: AssemblyCompany(`"Solab`")]
+        [assembly: AssemblyProduct(`"Onboard Api`")]
+        [assembly: AssemblyCopyright(`"MIT`")]
+        [assembly: AssemblyTrademark(`"`")]
+        [assembly: AssemblyCulture(`"`")]
+        [assembly: ComVisible(false)]
+        [assembly: AssemblyVersion(`"$version`")]
+        [assembly: AssemblyFileVersion(`"$version`")]"
+}
 #-----------------------------------------------------------[Execution]------------------------------------------------------------
 
 Write-Host "Downloading File..."
@@ -106,6 +129,18 @@ New-ApiClient -output 'typescript/typescript-jquery' -language 'typescript-jquer
 
 Write-Host "Cleaning up..."
 Remove-Item $definition
+
+# Does not deal with multiple branches
+Write-Host "Updating version"
+Set-Location .\Typescript\typescript-angular\
+$version = npm version minor
+$version = $version.Trim("v")
+
+Set-Location .\..\typescript-jquery\
+npm version $version
+
+Set-Location ./../../CSharp/.netstandard1.3/src/Onboard.Api.Client.CSharp/Properties/
+New-AssemblyInfo $version | Out-File -FilePath "AssemblyInfo.cs"
 
 git config user.email "devteam@solab.co.uk"
 git config user.name "Solab Bot"
