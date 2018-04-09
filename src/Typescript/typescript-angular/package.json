@@ -1,6 +1,6 @@
 {
   "name": "@solab/onboard-api-client-angular",
-  "version": "1.0.0",
+  "version": "1.4.0",
   "description": "A Angular client for interfacing with an Onboard tenants data.",
   "main": "index.js",
   "scripts": {
