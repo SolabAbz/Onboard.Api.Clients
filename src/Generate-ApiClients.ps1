@@ -115,7 +115,8 @@ Function New-AssemblyInfo {
         [assembly: AssemblyCulture(`"`")]
         [assembly: ComVisible(false)]
         [assembly: AssemblyVersion(`"$version`")]
-        [assembly: AssemblyFileVersion(`"$version`")]"
+        [assembly: AssemblyFileVersion(`"$version`")]
+        [assembly: AssemblyInformationalVersion(`"$version`")]"
 }
 #-----------------------------------------------------------[Execution]------------------------------------------------------------
 
