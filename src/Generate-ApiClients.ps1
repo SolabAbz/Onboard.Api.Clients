@@ -63,7 +63,7 @@ Function Clean {
 }
 
 function Get-SwaggerDefinition {
-    Invoke-WebRequest -Uri $swaggerUri -OutFile $definition -Headers @{ "Ocp-Apim-Subscription-Key" = "ebffd127154540b094968112ada83bd4" }
+    Invoke-WebRequest -Uri $swaggerUri -OutFile $definition -Headers @{ "Ocp-Apim-Subscription-Key" = $apiKey }
 }
 
 Function New-ApiClient {
